@@ -16,7 +16,10 @@ btnToCelcius.addEventListener("click", function () {
 
   const toCelcius = ((Number(inputFahrenheit.value) - 32) * 5) / 9;
   console.log(toCelcius);
-  document.getElementById("result").innerHTML = toCelcius;
+  // document.getElementById("result").innerHTML = toCelcius;
+  document.getElementById(
+    "result"
+  ).innerHTML = `${inputFahrenheit.value} F = ${toCelcius} C`;
 });
 
 // (-16.67°C × 9/5) + 32 = 2°F
@@ -26,5 +29,7 @@ btnToFahrenheit.addEventListener("click", function () {
 
   const toFahrenheit = (Number(inputCelcius.value) * 9) / 5 + 32;
   console.log(toFahrenheit);
-  document.getElementById("result").innerHTML = toFahrenheit;
+  document.getElementById(
+    "result"
+  ).innerHTML = `${inputCelcius.value} C = ${toFahrenheit} F`;
 });
